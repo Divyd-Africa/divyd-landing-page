@@ -48,7 +48,7 @@ const HeroArea = () => {
                         {/* Hero Text */}
                         <div className="space-y-0.5">
                             <h1 className="text-heading  leading-[110%] font-heading font-bold text-primary-text ">
-                                <span className={`block transition-opacity duration-500 ${typewriterStage >= 1 ? "opacity-100" : "opacity-0"}`}>Split Bill.</span>
+                                <span className={`block transition-opacity duration-500 ${typewriterStage >= 1 ? "opacity-100" : "opacity-0"}`}>Split Bills.</span>
                                 <span className={`block transition-opacity duration-500 bg-gradient-to-b from-primary-text to-primary-dark bg-clip-text text-transparent ${typewriterStage >= 2 ? "opacity-100" : "opacity-0"}`}>Send Reminders.</span>
                                 <span className={`block transition-opacity duration-500 ${typewriterStage >= 3 ? "opacity-100" : "opacity-0"} text-primary-dark bg-clip-text`}>Get Paid.</span>
                             </h1>
