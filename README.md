@@ -1,69 +1,77 @@
-# React + TypeScript + Vite
+### 📁 `README.md`
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Divyd Landing Page 🚀
 
-Currently, two official plugins are available:
+A sleek, responsive, and animated landing page built with **React**, **TypeScript**, and **Tailwind CSS** for the upcoming Divyd platform.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔥 Features
 
-## Expanding the ESLint configuration
+- ⚡ Modern UI with smooth animations
+- 🎨 Fully responsive and mobile-first design
+- 🖋 Custom fonts (UEFA & Satoshi)
+- 🌐 Route-aware navigation (`react-router-dom`)
+- 📜 Clean, scalable code structure with utility-first styling
+- 🔒 Google reCAPTCHA v3 integration (stealth mode)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React** + **TypeScript**
+- **Tailwind CSS**
+- **React Router**
+- **Custom CSS animations**
+- **Google reCAPTCHA v3**
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 📸 Preview
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+![Divyd Landing Page Screenshot](./public/preview.jpeg)
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+
+```bash (SSH)
+git clone git@github.com:Divyd-Africa/divyd-landing-page.git
+cd divyd-landing-page
+````
+
+2. **Install dependencies**
+
+```bash
+npm install
+# or
+yarn install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. **Run locally**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
+# or
+yarn dev
 ```
+
+4. Open [http://localhost:8085](http://localhost:8085) to view it in the browser.
+
+## ⚙️ Folder Structure
+
+```
+src/
+│
+├── assets/             # Fonts, images, styles etc.
+├── components/         # Reusable UI components (e.g., NavBar, Footer)
+├── pages/              # Route-based pages (e.g., FAQ.tsx)
+├── App.tsx             # Main App component
+├── main.tsx            # Entry point
+```
+
+## 🧠 Notes
+* The navigation dynamically adapts based on current route (e.g. shows "Back Home" if not on `/`).
+* reCAPTCHA badge is hidden intentionally via CSS, make sure to comply with Google’s policies if going to production.
+
+## 📄 License
+
+MIT License. Use responsibly.
+
+---
+
+Made with 💻 + ☕ by the Divyd team.
