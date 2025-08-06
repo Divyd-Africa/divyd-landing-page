@@ -18,7 +18,7 @@ export const FaqPage = () => {
         {
             id: 2,
             question: "Do I need to link my bank account?",
-            answer: "No, not at all. To make transfers, all you need to do is link your debit card or fund your Divyd Wallet. Once set up, you can easily receive, or transfer money securely and in real-time, with no complex steps or external apps required.",
+            answer: "No, not at all. To make transfers, all you need to do is fund your Divyd Wallet. Once set up, you can easily receive, or transfer money securely and in real-time, with no complex steps or external apps required.",
         },
         {
             id: 3,

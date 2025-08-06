@@ -17,7 +17,7 @@ const SectionComponent = () => {
         {
             element: <CreditCard className={`size-6 md:size-8 text-white`} />,
             title: "Get Paid",
-            description: "They pay you via card through Flutterwave. Money hits your account instantly.",
+            description: "They pay you via card through a third party system. Money hits your account instantly.",
         }
     ]
 

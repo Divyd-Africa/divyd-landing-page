@@ -116,9 +116,11 @@ export const PrivacyPage = () => {
                             {/* Feature Preview */}
                             <div className="flex flex-col md:flex-row gap-6 w-fit mx-auto my-8">
                                 {cards.map((card, index) => (
-                                         <div key={index} className="border-[0.5px] border-primary-dark/10 rounded-xl p-4 lg:p-10 lg:text-left shadow-lg shadow-black/20 space-y-2 max-w-[330px] mx-auto hover:scale-[103%] transition-all">
-                                             <div className={`flex gap-2 items-center`}>
-                                                 <h3 className="font-bold text-[18px] text-foreground">{card.title}</h3>
+                                         <div key={index} className="border-[0.5px] border-primary-dark/10 rounded-xl p-4 lg:p-10 lg:text-left shadow-lg shadow-black/20 space-y-2 max-w-[330px] hover:scale-[103%] transition-all">
+                                             <div className={``}>
+                                                 <h3 className="font-bold text-center md:text-left text-[18px]">
+                                                     {card.title}
+                                                 </h3>
                                              </div>
                                              <ul className="text-sm font-medium space-y-1 text-black/70 text-muted-foreground list-disc">
                                                  {card.lists.map((card, index) => (
@@ -138,10 +140,10 @@ export const PrivacyPage = () => {
 
                         {/* Additional Info */}
                         <div className="my-8 text-center text-[15px]">
-                            <p className="mb-1 font-bold">
+                            <p className="mb-4 md:mb-1 font-bold">
                                 Privacy questions or concerns?
                             </p>
-                            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-2">
+                            <div className="flex flex-col sm:flex-row items-center justify-center space-y-1 sm:space-y-0 sm:space-x-2">
                                 <a
                                     href="mailto:info@divydapp.ng"
                                     className="text-primary-dark hover:text-success transition-colors duration-300 font-medium flex items-center space-x-2"
@@ -149,7 +151,7 @@ export const PrivacyPage = () => {
                                     <Lock className="w-4 h-4" />
                                     <span>info@Divydapp.ng</span>
                                 </a>
-                                <span className="text-muted-foreground hidden sm:block">•</span>
+                                <span className="text-muted-foreground hidden md:block">•</span>
                                 <a
                                     href="mailto:info@divydapp.ng"
                                     className="text-primary-dark hover:text-success transition-colors duration-300 font-medium flex items-center space-x-2"

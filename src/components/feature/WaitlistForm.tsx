@@ -81,6 +81,7 @@ export default function WaitlistForm() {
     return (
         <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto space-y-3 px-2 py-4 md:mx-0">
             <WaitlistInput
+                key={'text'}
                 type="text"
                 name="name"
                 placeholder="Enter your name"
@@ -89,6 +90,7 @@ export default function WaitlistForm() {
             />
 
             <WaitlistInput
+                key={'email'}
                 type="email"
                 name="email"
                 placeholder="Enter your email"
