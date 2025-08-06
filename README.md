@@ -68,10 +68,6 @@ src/
 * The navigation dynamically adapts based on current route (e.g. shows "Back Home" if not on `/`).
 * reCAPTCHA badge is hidden intentionally via CSS, make sure to comply with Google’s policies if going to production.
 
-## 📄 License
-
-MIT License. Use responsibly.
-
 ---
 
 Made with 💻 + ☕ by the Divyd team.
