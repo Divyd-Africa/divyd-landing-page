@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 .idea
 tsconfig.tsbuildinfo
+.env
 
 node_modules
 dist
