@@ -36,7 +36,7 @@ const TiredOfChasing = () => {
                     <h2 className={`text-heading-two font-bold leading-[101%] text-center tracking-tight`}>
                         Tired of chasing your friends for money ?
                     </h2>
-                    <p className={`text-black/80 font-medium text-center leading-tight max-w-[450px] mx-auto`}>We
+                    <p ref={ref} className={`text-black/80 font-medium text-center leading-tight max-w-[450px] mx-auto`}>We
                         understand the struggle. Here's what happens too often in Nigerian friend groups.</p>
 
                     <div className={`flex flex-wrap gap-5 md:gap-10 w-fit mx-auto`}>
@@ -47,7 +47,7 @@ const TiredOfChasing = () => {
                                      isInView ? "animate-scale-in opacity-100" : "opacity-0 translate-y-6"
                                  }`}>
                                 <div  className={`bg-gradient-to-br from-primary-dark via-primary-dark to-black/80 p-2.5 rounded-md w-fit`}>{feature.element}</div>
-                                <p ref={ref} className={`font-bold text-[20px] leading-tight`}>{feature.title}</p>
+                                <p className={`font-bold text-[20px] leading-tight`}>{feature.title}</p>
                                 <p className={`font-black/90`}>{feature.description}</p>
                             </div>
                         ))}

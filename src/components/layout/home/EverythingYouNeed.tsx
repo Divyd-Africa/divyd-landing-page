@@ -46,11 +46,11 @@ const EverythingYouNeed = () => {
                     <h2 className={`text-heading-two font-bold leading-[101%] text-center tracking-tight`}>
                         Everything you Need
                     </h2>
-                    <p className={`text-black/80 font-medium text-center leading-tight max-w-[450px] mx-auto`}>Powerful features designed specifically for Nigerian social spending and group dynamics.</p>
+                    <p ref={ref} className={`text-black/80 font-medium text-center leading-tight max-w-[450px] mx-auto`}>Powerful features designed specifically for Nigerian social spending and group dynamics.</p>
 
                     <div className={`flex flex-wrap gap-5 md:gap-8 w-fit mx-auto`}>
                         {sectionThree.map(feature => (
-                            <div ref={ref} key={feature.title}
+                            <div key={feature.title}
                                  className={`border-[0.5px] border-primary-dark/10 bg-gradient-to-br from-white to-primary-light/50 rounded-xl p-4 md:px-6 space-y-2 max-w-[330px] mx-auto shadow-lg hover:shadow-xl hover:scale-[103%] transition-all flex gap-2.5 ${
                                      isInView ? "animate-scale-in opacity-100" : "opacity-0 translate-y-6"
                                  }`}>

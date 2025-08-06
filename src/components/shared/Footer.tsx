@@ -18,7 +18,7 @@ const Footer = () => {
                     {/* Navigation Links */}
                     <div className="flex flex-wrap items-center justify-center gap-3 text-sm font-medium">
                         {footerLinks.map((link) => (
-                            <a key={`link`} href={`/${link.trim().toLowerCase().split(' ').join('-')}`}
+                            <a key={link} href={`/${link.trim().toLowerCase().split(' ').join('-')}`}
                                className="text-orange-100 hover:text-white transition-colors duration-300 underline-offset-4">
                                 {link}
                             </a>

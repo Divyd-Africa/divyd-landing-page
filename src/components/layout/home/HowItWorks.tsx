@@ -34,11 +34,11 @@ const SectionComponent = () => {
                     <h2 className={`text-heading-two font-bold leading-[101%] text-center tracking-tight`}>
                         How It Works
                     </h2>
-                    <p className={`text-black/80 font-medium text-center leading-tight max-w-[450px] mx-auto`}>Three simple steps to never chase money again. Built for the modern Nigerian.</p>
+                    <p ref={ref} className={`text-black/80 font-medium text-center leading-tight max-w-[450px] mx-auto`}>Three simple steps to never chase money again. Built for the modern Nigerian.</p>
 
                     <div className={`flex flex-wrap gap-5 md:gap-10 w-fit mx-auto`}>
                         {sectionTwo.map((feature, index) => (
-                            <div ref={ref} key={feature.title} className={`border-[0.5px] border-primary-dark/10 bg-gradient-to-br from-white to-primary-light rounded-xl p-4 md:px-6 space-y-2 max-w-[330px] mx-auto shadow-lg hover:shadow-xl hover:scale-[103%] transition-all text-center relative ${
+                            <div key={feature.title} className={`border-[0.5px] border-primary-dark/10 bg-gradient-to-br from-white to-primary-light rounded-xl p-4 md:px-6 space-y-2 max-w-[330px] mx-auto shadow-lg hover:shadow-xl hover:scale-[103%] transition-all text-center relative ${
                                 isInView ? "animate-fade-in-up opacity-100" : "opacity-0 translate-y-6"
                             }`}>
                                 <p className={`absolute top-3 right-3 bg-primary-dark text-white rounded-full p-1 size-6 text-[10px] font-bold shadow-xl shadow-primary-dark/50 block`}>{index + 1}</p>
