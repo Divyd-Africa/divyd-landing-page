@@ -35,7 +35,7 @@ const HeroArea = () => {
 
     return (
         <main
-            className="py-8 bg-[#FEFEFE] border-[0.5px] border-primary-dark/20 min-h-[88vh] rounded-[25px] mx-3.5 my-3 overflow-hidden shadow-sm">
+            className="py-8 bg-[#FEFEFE] border-[0.5px] border-primary-dark/20 rounded-[25px] mx-3.5 my-3 overflow-hidden shadow-sm">
             <Container className="h-full">
                 <section className="flex flex-col md:flex-row items-center md:items-start gap-8">
                     <div className="text-center md:text-left space-y-4">
