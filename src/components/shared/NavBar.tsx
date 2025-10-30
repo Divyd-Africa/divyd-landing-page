@@ -36,11 +36,11 @@ const NavBar = () => {
                                className="text-[14px] cursor-pointer hover:font-bold font-medium transition-all text-primary-text">FAQ</p>
                         )}
                         {location.pathname !== "/terms" && (
-                            <p onClick={() => navigate('/terms')}
+                            <p onClick={() => navigate('/terms-of-service')}
                                className="text-[14px] cursor-pointer hover:font-bold font-medium transition-all text-primary-text">Terms of Service</p>
                         )}
                         {location.pathname !== "/privacy" && (
-                            <p onClick={() => navigate('/privacy')}
+                            <p onClick={() => navigate('/privacy-policy')}
                                className="text-[14px] cursor-pointer hover:font-bold font-medium transition-all text-primary-text">Privacy Policy</p>
                         )}
                         <button onClick={() =>
