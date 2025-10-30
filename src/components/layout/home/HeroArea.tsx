@@ -33,7 +33,7 @@ const HeroArea = () => {
     }, [])
 
     return (
-        <main className="py-12 md:py-16 bg-white/90">
+        <main className="py-12 md:py-16">
             <Container className="h-full">
                 <section className="flex flex-col lg:flex-row items-center gap-12">
                     <div className="text-center lg:text-left space-y-6 lg:w-1/2">

@@ -8,7 +8,7 @@ const CtaSection = () => {
     const [ref, isInView] = useInView<HTMLDivElement>();
 
     return (
-        <section id={'waitlist'} className="py-12 md:py-16 bg-white">
+        <section id={'waitlist'} className="py-12 md:py-16 ">
             <Container className="h-full">
                 <section className="space-y-8 text-center">
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-light/50 rounded-full mx-auto">
