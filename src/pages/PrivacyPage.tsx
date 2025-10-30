@@ -164,7 +164,8 @@ export const PrivacyPage = () => {
                 <p>If you have questions about this privacy policy or concerns about your privacy, please contact our Data Protection Officer:</p>
                 <div className="mt-4 p-4 bg-gradient-to-r from-primary-light/30 to-white rounded-lg border border-primary-light">
                   <p className="font-semibold">Divyd Privacy Team</p>
-                  <p>Email: <a href="mailto:privacy@divydapp.ng" className="text-primary-dark hover:underline">privacy@divydapp.ng</a></p>
+                  <p>Email: <a href="mailto:privacy@divydapp.ng" className="text-primary-dark hover:underline"></a></p>
+                  divyd.africa@gmail.com
                   <p className="mt-2">Address: Financial District, Lagos, Nigeria</p>
                 </div>
               </article>
