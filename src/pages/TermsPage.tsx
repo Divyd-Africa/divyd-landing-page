@@ -290,15 +290,6 @@ export const TermsPage = () => {
                       divyd.africa@gmail.com
                     </a>
                   </p>
-                  <p className="mt-2">
-                    Website:{" "}
-                    <a
-                      href="https://divyd.africa"
-                      className="text-primary-dark hover:underline"
-                    >
-                      https://divyd.africa
-                    </a>
-                  </p>
                 </div>
               </article>
             </div>

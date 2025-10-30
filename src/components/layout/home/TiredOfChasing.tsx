@@ -16,7 +16,7 @@ const TiredOfChasing = () => {
         },
         {
             element: <Play className={`size-6 md:size-8 text-white`}/>,
-            title: "You pay for Netflix — they all stream and vanish.\n",
+            title: "You pay for Netflix — they all stream and vanish.",
             description: "Subscriptions add up. Everyone enjoys, but somehow you're always the one paying.",
         }
     ]
@@ -24,35 +24,39 @@ const TiredOfChasing = () => {
     const [ref, isInView] = useInView<HTMLDivElement>();
 
     return (
-        <section
-            className="py-8 bg-[var(-color-background)] border-[2px] shadow-lg border-white rounded-[25px] mx-3.5 my-3 overflow-hidden">
-            <Container className={`h-full`}>
-                <section className={`space-y-4`}>
-                    <div
-                        className="inline-flex items-center gap-0.5 bg-orange-50 border border-orange-200 rounded-full px-3 py-1.5 text-sm font-medium text-orange-700">
-                        <Sparkles className="w-4 h-4 text-primary-dark mr-2"/>
-                        <span>Real Problems, Real Solutions</span>
+        <section className="py-12 md:py-16 bg-[var(--color-background)]">
+            <Container className="h-full">
+                <section className="space-y-8 text-center">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-light/50 rounded-full mx-auto">
+                        <Sparkles className="w-4 h-4 text-primary-dark"/>
+                        <span className="text-sm font-medium text-primary-dark">Real Problems, Real Solutions</span>
                     </div>
-                    <h2 className={`text-heading-two font-bold leading-[101%] text-center tracking-tight`}>
-                        Tired of chasing your friends for money ?
+                    
+                    <h2 className="text-heading-two font-bold leading-[110%] tracking-tight">
+                        Tired of chasing your friends for money?
                     </h2>
-                    <p ref={ref} className={`text-black/80 font-medium text-center leading-tight max-w-[450px] mx-auto`}>We
-                        understand the struggle. Here's what happens too often in Nigerian friend groups.</p>
+                    
+                    <p ref={ref} className="text-primary-text/90 font-medium max-w-2xl mx-auto">
+                        We understand the struggle. Here's what happens too often in Nigerian friend groups.
+                    </p>
 
-                    <div className={`flex flex-wrap gap-5 md:gap-10 w-fit mx-auto`}>
-                        {sectionOne.map(feature => (
-
-                            <div key={feature.title}
-                                 className={`border-[0.5px] border-primary-dark/10 bg-white/90 rounded-xl p-4 md:p-6 shadow-lg shadow-primary/20 space-y-2 max-w-[330px] mx-auto hover:scale-[103%] hover:shadow-xl transition-all ${
-                                     isInView ? "animate-scale-in opacity-100" : "opacity-0 translate-y-6"
-                                 }`}>
-                                <div  className={`bg-gradient-to-br from-primary-dark via-primary-dark to-black/80 p-2.5 rounded-md w-fit`}>{feature.element}</div>
-                                <p className={`font-bold text-[20px] leading-tight`}>{feature.title}</p>
-                                <p className={`font-black/90`}>{feature.description}</p>
+                    <div className="flex flex-wrap justify-center gap-6 md:gap-8 mt-10">
+                        {sectionOne.map((feature, index) => (
+                            <div 
+                                key={feature.title}
+                                className={`bg-white rounded-xl p-6 shadow-lg border border-primary-light/50 space-y-4 max-w-[340px] transition-all hover:shadow-xl ${
+                                    isInView ? "animate-scale-in opacity-100" : "opacity-0 translate-y-6"
+                                }`}
+                                style={{ transitionDelay: isInView ? `${index * 100}ms` : '0ms' }}
+                            >
+                                <div className="bg-gradient-to-br from-primary-dark to-primary p-3 rounded-lg w-fit mx-auto">
+                                    {feature.element}
+                                </div>
+                                <h3 className="font-bold text-lg leading-tight text-primary-text">{feature.title}</h3>
+                                <p className="text-primary-text/80">{feature.description}</p>
                             </div>
                         ))}
                     </div>
-
                 </section>
             </Container>
         </section>

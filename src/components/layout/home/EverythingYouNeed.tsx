@@ -34,35 +34,41 @@ const EverythingYouNeed = () => {
     const [ref, isInView] = useInView<HTMLDivElement>();
 
     return (
-        <section
-            className="py-8 bg-[var(-color-background)] border-[2px] shadow-lg border-white rounded-[25px] mx-3.5 my-3 overflow-hidden">
-            <Container className={`h-full`}>
-                <section className={`space-y-4`}>
-                    <div
-                        className="inline-flex items-center gap-0.5 bg-orange-50 border border-orange-200 rounded-full px-3 py-1.5 text-sm font-medium text-orange-700">
+        <section className="py-12 md:py-16 bg-[var(--color-background)]">
+            <Container className="h-full">
+                <section className="space-y-8 text-center">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-light/50 rounded-full mx-auto">
                         <Sparkles className="w-4 h-4 text-primary-dark mr-2"/>
-                        <span>All in One Place</span>
+                        <span className="text-sm font-medium text-primary-dark">All in One Place</span>
                     </div>
-                    <h2 className={`text-heading-two font-bold leading-[101%] text-center tracking-tight`}>
+                    
+                    <h2 className="text-heading-two font-bold leading-[110%] tracking-tight">
                         Everything you Need
                     </h2>
-                    <p ref={ref} className={`text-black/80 font-medium text-center leading-tight max-w-[450px] mx-auto`}>Powerful features designed specifically for Nigerian social spending and group dynamics.</p>
+                    
+                    <p ref={ref} className="text-primary-text/90 font-medium max-w-2xl mx-auto">
+                        Powerful features designed specifically for Nigerian social spending and group dynamics.
+                    </p>
 
-                    <div className={`flex flex-wrap gap-5 md:gap-8 w-fit mx-auto`}>
-                        {sectionThree.map(feature => (
-                            <div key={feature.title}
-                                 className={`border-[0.5px] border-primary-dark/10 bg-gradient-to-br from-white to-primary-light/50 rounded-xl p-4 md:px-6 space-y-2 max-w-[330px] mx-auto shadow-lg hover:shadow-xl hover:scale-[103%] transition-all flex gap-2.5 ${
-                                     isInView ? "animate-scale-in opacity-100" : "opacity-0 translate-y-6"
-                                 }`}>
-                                <div className={`bg-gradient-to-br from-primary-dark to-black p-2.5 rounded-md w-fit h-fit`}>{feature.element}</div>
-                                <div className={`gap-1.5 flex flex-col`}>
-                                    <p className={`font-bold text-[20px] leading-tight`}>{feature.title}</p>
-                                    <p className={`font-black/90`}>{feature.description}</p>
+                    <div className="flex flex-wrap justify-center gap-6 md:gap-8 mt-10">
+                        {sectionThree.map((feature, index) => (
+                            <div 
+                                key={feature.title}
+                                className={`bg-gradient-to-br from-white to-primary-light/50 rounded-xl p-6 space-y-4 max-w-[380px] shadow-lg border border-primary-light/50 transition-all hover:shadow-xl flex gap-4 ${
+                                    isInView ? "animate-scale-in opacity-100" : "opacity-0 translate-y-6"
+                                }`}
+                                style={{ transitionDelay: isInView ? `${index * 100}ms` : '0ms' }}
+                            >
+                                <div className="bg-gradient-to-br from-primary-dark to-black p-3 rounded-lg w-fit h-fit">
+                                    {feature.element}
+                                </div>
+                                <div className="gap-2 flex flex-col text-left">
+                                    <h3 className="font-bold text-lg leading-tight text-primary-text">{feature.title}</h3>
+                                    <p className="text-primary-text/80">{feature.description}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
-
                 </section>
             </Container>
         </section>

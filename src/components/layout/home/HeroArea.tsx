@@ -1,7 +1,6 @@
 import {Container} from "components/layout/Container";
 import {Shield, Sparkles, Star, Zap} from "lucide-react";
 import WaitlistForm from "components/feature/WaitlistForm";
-import BillSplit from "assets/img/BillSplitVisualization.png";
 import {useEffect, useState} from "react";
 
 const HeroArea = () => {
@@ -34,20 +33,18 @@ const HeroArea = () => {
     }, [])
 
     return (
-        <main
-            className="py-8 bg-[#FEFEFE] border-[0.5px] border-primary-dark/20 rounded-[25px] mx-3.5 my-3 overflow-hidden shadow-sm">
+        <main className="py-12 md:py-16 bg-white/90">
             <Container className="h-full">
-                <section className="flex flex-col md:flex-row items-center md:items-start gap-8">
-                    <div className="text-center md:text-left space-y-4">
-                        <div
-                            className="inline-flex items-center gap-0.5 bg-orange-50 border border-orange-200 rounded-full px-3 py-1.5 text-sm font-medium text-orange-700">
-                            <Sparkles className="w-4 h-4 text-primary-dark mr-2"/>
-                            <span>Nigeria's first social payment app 🇳🇬</span>
+                <section className="flex flex-col lg:flex-row items-center gap-12">
+                    <div className="text-center lg:text-left space-y-6 lg:w-1/2">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-light/50 rounded-full mx-auto lg:mx-0">
+                            <Sparkles className="w-4 h-4 text-primary-dark"/>
+                            <span className="text-sm font-medium text-primary-dark">Nigeria's first social payment app 🇳🇬</span>
                         </div>
 
                         {/* Hero Text */}
-                        <div className="space-y-0.5">
-                            <h1 className="text-heading  leading-[110%] font-heading font-bold text-primary-text ">
+                        <div className="space-y-2">
+                            <h1 className="text-heading leading-[110%] font-heading font-bold text-primary-text">
                                 <span className={`block transition-opacity duration-500 ${typewriterStage >= 1 ? "opacity-100" : "opacity-0"}`}>Split Bills.</span>
                                 <span className={`block transition-opacity duration-500 bg-gradient-to-b from-primary-text to-primary-dark bg-clip-text text-transparent ${typewriterStage >= 2 ? "opacity-100" : "opacity-0"}`}>Send Reminders.</span>
                                 <span className={`block transition-opacity duration-500 ${typewriterStage >= 3 ? "opacity-100" : "opacity-0"} text-primary-dark bg-clip-text`}>Get Paid.</span>
@@ -55,43 +52,33 @@ const HeroArea = () => {
                         </div>
 
                         {/* Description */}
-                        <p className="text-[12px] sm:text-[14px] md:text-[17.5px] text-primary-text/90 leading-tight max-w-[330px] mx-auto md:mx-0 font-bold lg:max-w-[350px] animate-fade-in-up">
+                        <p className="text-[14px] md:text-[17.5px] text-primary-text/90 leading-relaxed max-w-[330px] mx-auto lg:mx-0 font-medium">
                             Track who owes what, set deadlines, and get your money without awkward chats.
                         </p>
 
                         {/* Quick Features */}
-                        <div
-                            className={`font-medium text-black/80 flex items-center mt-6 gap-[8px] xsm:gap-4 leading-tight mx-auto w-fit md:mx-0`}>
+                        <div className="font-medium text-primary-text/80 flex flex-wrap items-center justify-center lg:justify-start gap-4 mt-6">
                             {quickFeatures.map(feature => (
-                                <p key={feature.text}
-                                   className={`flex items-center text-left gap-[5px] text-[10px] md:text-[14px] w-fit`}>
-                                    <span className={`text-primary-dark`}>{feature.element}</span>
-                                    <span className={`font-medium typewriter`}>{feature.text}</span>
+                                <p key={feature.text} className="flex items-center gap-2 text-[14px]">
+                                    <span className="text-primary-dark">{feature.element}</span>
+                                    <span className="font-medium">{feature.text}</span>
                                 </p>
                             ))}
                         </div>
-
-                        {/* Waitlist Modal */}
-                        <div
-                            className={`bg-gradient-to-br from-white via-white to-primary-light border-black/20 border-[0.2px] shadow-lg shadow-primary-dark/20 p-2 hover:shadow-xl hover:scale-[101%] w-fit transition-all rounded-lg my-4 sm:p-4 animate-scale-in`}>
-                            <div
-                                className="inline-flex items-center gap-0.5 bg-orange-50 border border-orange-200 rounded-full px-2.5 py-1 text-[10px] font-medium text-primary-dark mb-3">
-                                <Sparkles className="w-4 h-4 text-primary-dark mr-2"/>
-                                <span>Early Access</span>
+                    </div>
+                    
+                    <div className="lg:w-1/2 w-full max-w-md mx-auto">
+                        <div className="bg-white rounded-xl p-6 shadow-lg border border-primary-light/50 transition-all hover:shadow-xl">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary-light/50 rounded-full mb-4">
+                                <Sparkles className="w-4 h-4 text-primary-dark"/>
+                                <span className="text-xs font-medium text-primary-dark">Early Access</span>
                             </div>
 
-                            <h2 className={`font-bold md:text-[18px] tracking-tight`}>Join the Waitlist</h2>
-                            <p className={`font-medium text-[13px] md:text-[15px] leading-[1.2] text-black/90`}>Be first
-                                to experience the future of group payments in Nigeria.</p>
+                            <h2 className="font-bold text-xl mb-2">Join the Waitlist</h2>
+                            <p className="font-medium text-[15px] text-primary-text/90 mb-4">Be first to experience the future of group payments in Nigeria.</p>
                             <WaitlistForm/>
-                            <p className={`text-[10px] text-center text-black/70 leading-tight`}>By joining the
-                                waitlist, you agree to receive updates about Divyd's launch.</p>
+                            <p className="text-xs text-center text-primary-text/70 mt-3">By joining the waitlist, you agree to receive updates about Divyd's launch.</p>
                         </div>
-
-                    </div>
-                    <div
-                        className={`mx-auto w-fit -mt-5 md:mt-14 animate-scale-in`}>
-                        <img className={`max-w-[550px] animate-bounce-gentle w-full`} src={BillSplit} alt={`BillSplit`}/>
                     </div>
                 </section>
             </Container>
