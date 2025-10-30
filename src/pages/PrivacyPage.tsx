@@ -166,7 +166,6 @@ export const PrivacyPage = () => {
                   <p className="font-semibold">Divyd Privacy Team</p>
                   <p>Email: <a href="mailto:privacy@divydapp.ng" className="text-primary-dark hover:underline"></a></p>
                   divyd.africa@gmail.com
-                  <p className="mt-2">Address: Financial District, Lagos, Nigeria</p>
                 </div>
               </article>
             </div>
