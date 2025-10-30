@@ -1,170 +1,183 @@
 import NavBar from "components/shared/NavBar";
-import {Eye, Lock, Server, Shield} from "lucide-react";
-import {Container} from "components/layout/Container";
-import {useInView} from "hooks/useInView";
+import { Lock, Shield, FileText } from "lucide-react";
+import { Container } from "components/layout/Container";
 
 export const PrivacyPage = () => {
-    const policies = [
-        {
-            element: <Shield className={`size-6 md:size-8 text-white`}/>,
-            title: "Data Protection",
-            description: "Always the one covering transport? Never getting reimbursed? We feel you."
-        },
-        {
-            element: <Eye className={`size-6 md:size-8 text-white`}/>,
-            title: "Transparency",
-            description: "Group dinners are fun until it's time to split the bill and everyone disappears."
-        },
-        {
-            element: <Server className={`size-6 md:size-8 text-white`}/>,
-            title: "Minimal Data",
-            description: "Subscriptions add up. Everyone enjoys, but somehow you're always the one paying.",
-        }
-    ]
-
-    const whatWillWeCover = [
-        "How we collect and use your data.",
-        "Your rights and controls.",
-        "Data sharing policies",
-        "International data transfers",
-    ]
-
-    const ourCommitments = [
-        "GDPR and local compliance.",
-        "No selling of personal data.",
-        "Right to delete your data.",
-        "Regular security audits."
-    ]
-
-    const cards = [
-        {
-            title: "🔐 What We'll Cover",
-            lists: whatWillWeCover
-        },
-        {
-            title: "🛡️ Our Commitments",
-            lists: ourCommitments
-        }
-    ]
-
-    const [ref, isInView] = useInView<HTMLDivElement>();
-
-    return (
-        <div>
-            <NavBar/>
-            <section className="relative px-6 py-8 bg-[var(-color-background)] border-[2px] shadow-lg border-white rounded-[25px] mx-3.5 my-3 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-glow"></div>
-                <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float"></div>
-
-                <div className="container mx-auto relative z-10">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <div
-                            className="inline-flex items-center px-4 py-2 bg-surface-elevated rounded-full border border-white/10 backdrop-blur-sm bg-white/80 mb-4">
-                            <Lock className="size-4 text-primary mr-2"/>
-                            <span className="text-sm font-medium text-muted-foreground">Your Data, Your Control</span>
-                        </div>
-
-                        <h1 className="text-heading-two animate-scale-in leading-[90%] font-bold text-black mb-4 lg:mb-6">
-                            Privacy <span className="bg-gradient-to-r from-black to-primary-dark bg-clip-text text-transparent">Policy</span>
-                        </h1>
-
-                        <p className="text-lg animate-fade-in-up text-black/80 max-w-2xl mx-auto -mt-2">
-                            Your privacy matters to us. Here's how we protect, respect, and handle your personal information.
-                        </p>
-                    </div>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-[#fbf8f4] via-white to-[#fff9f5]">
+      <NavBar />
+      
+      {/* Header Section */}
+      <section className="py-8 md:py-10 relative overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-0"></div>
+        <div className="absolute bottom-0 right-1/3 w-72 h-72 bg-primary-dark/5 rounded-full blur-3xl -z-0"></div>
+        
+        <Container className="text-center max-w-[1024px] relative z-10">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 rounded-full border border-primary-light backdrop-blur-sm mb-6">
+            <Lock className="w-4 h-4 text-primary-dark" />
+            <span className="text-sm font-medium text-primary-text">Data Protection</span>
+          </div>
+          
+          <h1 className="text-heading-two font-bold text-primary-text mb-6">
+            Privacy <span className="bg-gradient-to-r from-primary-dark to-primary bg-clip-text text-transparent">Policy</span>
+          </h1>
+          
+          <p className="text-lg text-primary-text/80 max-w-2xl mx-auto">
+            Your privacy is fundamental to our values. This policy explains how we collect, use, and protect your personal information.
+          </p>
+          
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-primary-text/70">
+            <div className="flex items-center gap-2">
+              <FileText className="w-4 h-4" />
+              <span>Effective: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            </div>
+            <span className="hidden sm:block">•</span>
+            <div className="flex items-center gap-2">
+              <Shield className="w-4 h-4" />
+              <span>Compliant with Financial Regulations</span>
+            </div>
+          </div>
+        </Container>
+      </section>
+      
+      {/* Main Content */}
+      <main className="pb-16">
+        <Container className="max-w-[1024px] w-full">
+          <div className="bg-white/80 max-w-[900px] w-full mx-auto backdrop-blur-sm rounded-2xl border border-primary-light/50 shadow-xl p-6 md:p-8 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-primary-dark/5 rounded-full -translate-y-16 translate-x-16"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-primary/5 to-primary-dark/10 rounded-full translate-y-12 -translate-x-12"></div>
+            
+            <div className="relative z-10">
+              <article className="prose prose-sm md:prose-base max-w-[1024px] w-full mx-auto">
+                <div className="text-center mb-8 pb-6 border-b border-primary-light">
+                  <h2 className="text-primary-text font-bold text-xl md:text-2xl">Privacy Policy</h2>
+                  <p className="text-primary-dark/80 mt-2">Last Updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                 </div>
-            </section>
-            <section
-                className="py-8 bg-[var(-color-background)] border-[2px] shadow-lg border-white rounded-[25px] mx-3.5 my-3 overflow-hidden">
-                <Container className={`h-full`}>
-                    <section className={``}>
-                        <div className={`flex flex-wrap gap-5 md:gap-10 w-fit mx-auto`}>
-                            {policies.map(feature => (
-
-                                <div key={feature.title}
-                                     className={`border-[0.5px] border-primary-dark/10 bg-white/90 rounded-xl p-4 md:p-6 shadow-lg shadow-primary/20 space-y-2 max-w-[330px] mx-auto hover:scale-[103%] hover:shadow-xl transition-all ${
-                                         isInView ? "animate-scale-in opacity-100" : "opacity-0 translate-y-6"
-                                     }`}>
-                                    <div  className={`bg-gradient-to-br from-primary-dark via-primary-dark to-black/80 p-2.5 rounded-md w-fit`}>{feature.element}</div>
-                                    <p ref={ref} className={`font-bold text-[20px] leading-tight`}>{feature.title}</p>
-                                    <p className={`font-black/90`}>{feature.description}</p>
-                                </div>
-                            ))}
-                        </div>
-
-                    </section>
-                </Container>
-            </section>
-
-            <section className="relative px-6 py-1 bg-[var(-color-background)] border-[2px] shadow-lg border-white rounded-[25px] mx-3.5 my-3 overflow-hidden">
-                <div className="container mx-auto">
-                    <div className="max-w-4xl mx-auto">
-                        {/* Coming Soon Card */}
-                        <div className="glass-effect rounded-3xl p-4 border border-white/10 text-center">
-                            <div className="size-14 bg-gradient-to-br from-primary-dark to-black rounded-xl flex items-center justify-center mx-auto mb-2 shadow-2xl">
-                                <Lock className="size-7 text-white"/>
-                            </div>
-
-                            <h2 className="text-3xl font-bold text-foreground mb-6">
-                                Detailed Privacy Policy Coming Soon
-                            </h2>
-
-                            <p className="text-md animate-fade-in-up text-black/80 max-w-xl mx-auto -mt-2">
-                                We're working with privacy experts and legal professionals to create a comprehensive privacy policy that puts you in control. Complete details will be available before public release.
-                            </p>
-
-                            {/* Feature Preview */}
-                            <div className="flex flex-col md:flex-row gap-6 w-fit mx-auto my-8">
-                                {cards.map((card, index) => (
-                                         <div key={index} className="border-[0.5px] border-primary-dark/10 rounded-xl p-4 lg:p-10 lg:text-left shadow-lg shadow-black/20 space-y-2 max-w-[330px] hover:scale-[103%] transition-all">
-                                             <div className={``}>
-                                                 <h3 className="font-bold text-center md:text-left text-[18px]">
-                                                     {card.title}
-                                                 </h3>
-                                             </div>
-                                             <ul className="text-sm font-medium space-y-1 text-black/70 text-muted-foreground list-disc">
-                                                 {card.lists.map((card, index) => (
-                                                     <li className={`ml-3`} key={index}>{card}</li>
-                                                 ))}
-                                             </ul>
-                                         </div>
-                                     ))
-                                }
-                            </div>
-
-                            <div className="inline-flex bg-white/70 backdrop-blur-2xl p-3 items-center px-6 bg-surface-elevated rounded-2xl border border-white/10">
-                                <span className="text-muted-foreground text-sm">🧡 Privacy-first approach baked into every feature we build
-                                </span>
-                            </div>
-                        </div>
-
-                        {/* Additional Info */}
-                        <div className="my-8 text-center text-[15px]">
-                            <p className="mb-4 md:mb-1 font-bold">
-                                Privacy questions or concerns?
-                            </p>
-                            <div className="flex flex-col sm:flex-row items-center justify-center space-y-1 sm:space-y-0 sm:space-x-2">
-                                <a
-                                    href="mailto:info@divydapp.ng"
-                                    className="text-primary-dark hover:text-success transition-colors duration-300 font-medium flex items-center space-x-2"
-                                >
-                                    <Lock className="w-4 h-4" />
-                                    <span>info@Divydapp.ng</span>
-                                </a>
-                                <span className="text-muted-foreground hidden md:block">•</span>
-                                <a
-                                    href="mailto:info@divydapp.ng"
-                                    className="text-primary-dark hover:text-success transition-colors duration-300 font-medium flex items-center space-x-2"
-                                >
-                                    <Shield className="w-4 h-4" />
-                                    <span>Data Protection Officer</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                
+                <h3 className="text-primary-text font-semibold text-lg mt-6 mb-3 flex items-center gap-2">
+                  <span className="bg-gradient-to-r from-primary-dark to-primary w-6 h-6 rounded-full flex items-center justify-center text-white text-xs">1</span>
+                  Information We Collect
+                </h3>
+                
+                <h4 className="text-primary-text font-medium mt-4 mb-2">Personal Information</h4>
+                <p>We collect information you provide directly to us when using our services:</p>
+                <ul className="list-disc pl-5 space-y-2 mt-3">
+                  <li>Name and contact details (email, phone number)</li>
+                  <li>Account credentials (password, authentication tokens)</li>
+                  <li>Financial information necessary for transactions</li>
+                  <li>Communication preferences</li>
+                </ul>
+                
+                <h4 className="text-primary-text font-medium mt-4 mb-2">Automatically Collected Information</h4>
+                <p>We may automatically collect information when you interact with our services:</p>
+                <ul className="list-disc pl-5 space-y-2 mt-3">
+                  <li>Device information (IP address, browser type, operating system)</li>
+                  <li>Usage data (pages visited, time spent, features used)</li>
+                  <li>Transaction details and billing information</li>
+                  <li>Security and fraud prevention data</li>
+                </ul>
+                
+                <h3 className="text-primary-text font-semibold text-lg mt-8 mb-3 flex items-center gap-2">
+                  <span className="bg-gradient-to-r from-primary-dark to-primary w-6 h-6 rounded-full flex items-center justify-center text-white text-xs">2</span>
+                  How We Use Your Information
+                </h3>
+                <p>We use your information to provide, maintain, and improve our services:</p>
+                <ul className="list-disc pl-5 space-y-2 mt-3">
+                  <li>To authenticate your identity and secure your account</li>
+                  <li>To process financial transactions and manage your account</li>
+                  <li>To communicate with you about your account and services</li>
+                  <li>To detect and prevent fraudulent or unauthorized activity</li>
+                  <li>To comply with legal and regulatory requirements</li>
+                  <li>To personalize your experience and improve our offerings</li>
+                </ul>
+                
+                <h3 className="text-primary-text font-semibold text-lg mt-8 mb-3 flex items-center gap-2">
+                  <span className="bg-gradient-to-r from-primary-dark to-primary w-6 h-6 rounded-full flex items-center justify-center text-white text-xs">3</span>
+                  Data Protection & Security
+                </h3>
+                <p>We implement industry-standard security measures to protect your information:</p>
+                <ul className="list-disc pl-5 space-y-2 mt-3">
+                  <li>End-to-end encryption for sensitive data transmission</li>
+                  <li>Secure storage with advanced encryption protocols</li>
+                  <li>Regular security audits and vulnerability assessments</li>
+                  <li>Strict access controls and authentication procedures</li>
+                  <li>Employee training on data protection best practices</li>
+                </ul>
+                
+                <h3 className="text-primary-text font-semibold text-lg mt-8 mb-3 flex items-center gap-2">
+                  <span className="bg-gradient-to-r from-primary-dark to-primary w-6 h-6 rounded-full flex items-center justify-center text-white text-xs">4</span>
+                  Data Sharing & Disclosure
+                </h3>
+                <p>We do not sell your personal information. We may share data only in these circumstances:</p>
+                <ul className="list-disc pl-5 space-y-2 mt-3">
+                  <li><strong>With Service Providers:</strong> Trusted partners who assist in delivering our services</li>
+                  <li><strong>Legal Compliance:</strong> When required by law or to protect our rights</li>
+                  <li><strong>Business Transactions:</strong> In connection with mergers or acquisitions</li>
+                  <li><strong>With Your Consent:</strong> When you explicitly authorize sharing</li>
+                </ul>
+                
+                <h3 className="text-primary-text font-semibold text-lg mt-8 mb-3 flex items-center gap-2">
+                  <span className="bg-gradient-to-r from-primary-dark to-primary w-6 h-6 rounded-full flex items-center justify-center text-white text-xs">5</span>
+                  Your Rights & Choices
+                </h3>
+                <p>You have control over your personal information:</p>
+                <ul className="list-disc pl-5 space-y-2 mt-3">
+                  <li>Access and review your personal information</li>
+                  <li>Request corrections to inaccurate data</li>
+                  <li>Delete your account and associated data</li>
+                  <li>Opt out of marketing communications</li>
+                  <li>Export your data in portable formats</li>
+                </ul>
+                
+                <h3 className="text-primary-text font-semibold text-lg mt-8 mb-3 flex items-center gap-2">
+                  <span className="bg-gradient-to-r from-primary-dark to-primary w-6 h-6 rounded-full flex items-center justify-center text-white text-xs">6</span>
+                  Data Retention
+                </h3>
+                <p>We retain your information for as long as necessary to provide our services and comply with legal obligations. Retention periods vary based on:</p>
+                <ul className="list-disc pl-5 space-y-2 mt-3">
+                  <li>The nature of the information and its sensitivity</li>
+                  <li>Contractual and legal requirements</li>
+                  <li>Business and operational needs</li>
+                </ul>
+                
+                <h3 className="text-primary-text font-semibold text-lg mt-8 mb-3 flex items-center gap-2">
+                  <span className="bg-gradient-to-r from-primary-dark to-primary w-6 h-6 rounded-full flex items-center justify-center text-white text-xs">7</span>
+                  International Data Transfers
+                </h3>
+                <p>Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place for such transfers, including:</p>
+                <ul className="list-disc pl-5 space-y-2 mt-3">
+                  <li>Standard contractual clauses approved by regulators</li>
+                  <li>Compliance with applicable data protection laws</li>
+                  <li>Robust technical and organizational measures</li>
+                </ul>
+                
+                <h3 className="text-primary-text font-semibold text-lg mt-8 mb-3 flex items-center gap-2">
+                  <span className="bg-gradient-to-r from-primary-dark to-primary w-6 h-6 rounded-full flex items-center justify-center text-white text-xs">8</span>
+                  Policy Updates
+                </h3>
+                <p>We may update this policy periodically to reflect changes in our practices or legal requirements. We will notify you of significant changes through our platform or by email.</p>
+                
+                <h3 className="text-primary-text font-semibold text-lg mt-8 mb-3 flex items-center gap-2">
+                  <span className="bg-gradient-to-r from-primary-dark to-primary w-6 h-6 rounded-full flex items-center justify-center text-white text-xs">9</span>
+                  Contact Us
+                </h3>
+                <p>If you have questions about this privacy policy or concerns about your privacy, please contact our Data Protection Officer:</p>
+                <div className="mt-4 p-4 bg-gradient-to-r from-primary-light/30 to-white rounded-lg border border-primary-light">
+                  <p className="font-semibold">Divyd Privacy Team</p>
+                  <p>Email: <a href="mailto:privacy@divydapp.ng" className="text-primary-dark hover:underline">privacy@divydapp.ng</a></p>
+                  <p className="mt-2">Address: Financial District, Lagos, Nigeria</p>
                 </div>
-            </section>
-
-        </div>
-    );
+              </article>
+            </div>
+          </div>
+          
+          <div className="mt-8 text-center">
+            <p className="text-primary-text/70 text-sm">
+              © {new Date().getFullYear()} Divyd. All rights reserved.
+            </p>
+          </div>
+        </Container>
+      </main>
+    </div>
+  );
 };

@@ -19,9 +19,8 @@ const NavBar = () => {
     }
 
     return (
-        <nav className="w-full mx-auto z-50 animate-fade-in-up">
-            <nav className="py-3.5 animate-fade-in-up shadow-sm border border-primary-light
-                  shadow-primary/10 rounded-full bg-white mt-3 mx-3 ">
+        <nav className="w-full mx-auto max-w-[1380px] z-50 animate-fade-in-up">
+            <nav className="py-3.5 animate-fade-in-up rounded-full bg-white mt-3 mx-3 ">
 
                 <div className={`flex justify-between items-center  max-w-[1440px] mx-auto w-full px-[clamp(20px,calc(20px+60*((100vw-375px)/1185)),80px)]`}>
                     <div onClick={() => navigate('/')} className="flex gap-1 items-center cursor-pointer">
