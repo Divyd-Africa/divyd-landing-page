@@ -30,13 +30,23 @@ const NavBar = () => {
                         </p>
                     </div>
 
-                    <div className="flex gap-2.5 items-center">
-                        {location.pathname === "/" && <p onClick={() => navigate('/faq')}
-                                                         className="text-[14px] cursor-pointer hover:font-bold font-medium transition-all">FAQ</p>}
+                    <div className="flex gap-4 items-center">
+                        {location.pathname === "/" && (
+                            <p onClick={() => navigate('/faq')}
+                               className="text-[14px] cursor-pointer hover:font-bold font-medium transition-all text-primary-text">FAQ</p>
+                        )}
+                        {location.pathname !== "/terms" && (
+                            <p onClick={() => navigate('/terms')}
+                               className="text-[14px] cursor-pointer hover:font-bold font-medium transition-all text-primary-text">Terms of Service</p>
+                        )}
+                        {location.pathname !== "/privacy" && (
+                            <p onClick={() => navigate('/privacy')}
+                               className="text-[14px] cursor-pointer hover:font-bold font-medium transition-all text-primary-text">Privacy Policy</p>
+                        )}
                         <button onClick={() =>
                             location.pathname === "/" ? scrollToSection("waitlist") : navigate("/")
                         }
-                                className="bg-primary-dark font-medium border-primary-light shadow-primary/20 shadow-lg text-white rounded-full p-1.5 px-5 text-[14px] transition-all cursor-pointer hover:scale-[103%]">
+                                className="bg-gradient-to-r from-primary-dark to-primary font-medium text-white rounded-lg p-1.5 px-5 text-[14px] transition-all cursor-pointer hover:scale-[103%] hover:shadow-lg">
                             {buttonText}
                         </button>
                     </div>
