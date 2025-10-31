@@ -124,7 +124,7 @@ export const PrivacyPage = () => {
                 <ul className="list-disc pl-5 space-y-2 mt-3">
                   <li>Access and review your personal information</li>
                   <li>Request corrections to inaccurate data</li>
-                  <li>Delete your account and associated data</li>
+                  <li>Delete your account and associated data by contacting us at divyd.africa@gmail.com</li>
                   <li>Opt out of marketing communications</li>
                   <li>Export your data in portable formats</li>
                 </ul>
