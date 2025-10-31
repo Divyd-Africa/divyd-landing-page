@@ -203,6 +203,9 @@ export const TermsPage = () => {
                     A deletion workflow will be implemented; once live, users
                     may request deletion.
                   </li>
+                  <li>
+                   Users can request deletion of an account by contacting us at divyd.africa@gmail.com
+                  </li>
                 </ul>
 
                 <h3 className="text-primary-text font-semibold text-lg mt-8 mb-3 flex items-center gap-2">
